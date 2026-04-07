@@ -173,7 +173,7 @@ int main() {
         if (cmd == "Indent") {
             if (tokens.size() != 1) ok = false; else mach.indent();
         } else if (cmd == "Dedent") {
-            if (tokens.size() != 1) ok = mach.dedent(); else ok = mach.dedent();
+            if (tokens.size() != 1) ok = false; else ok = mach.dedent();
         } else if (cmd == "Declare") {
             if (tokens.size() != 4) ok = false; else ok = mach.declare(tokens[1], tokens[2], tokens[3]);
         } else if (cmd == "Add") {
